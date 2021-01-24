@@ -1,0 +1,267 @@
+$breakpoints: (
+  "sm": "screen and (max-width: 500px)",
+  "tab": "screen and (max-width: 768px)",
+  "tab-l": "screen and (max-width: 1024px)",
+);
+
+@mixin mq($breakpoint: tab-l) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+  }
+
+$black: #2b2b2b;
+$gray: #acacac;
+
+
+
+@mixin centerX {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  @mixin centerY {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  @mixin center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @mixin fz12 {
+    font-size: 1.2rem;
+  }
+  @mixin fz13 {
+    font-size: 1.3rem;
+  }
+  @mixin fz14 {
+    font-size: 1.4rem;
+  }
+  @mixin fz16 {
+    font-size: 1.6rem;
+  }
+  @mixin fz18 {
+    font-size: 1.8rem;
+  }
+  @mixin fz20 {
+    font-size: 2rem;
+  }
+  
+  @mixin fz22 {
+    font-size: 2.2rem;
+    @include mq(tab-l) {
+      font-size: 2rem;
+    }
+  }
+  
+  @mixin fz24 {
+    font-size: 2.4rem;
+    @include mq(tab-l) {
+      font-size: 2.2rem;
+    }
+    @include mq(sm) {
+      font-size: 2rem;
+    }
+  }
+  
+  @mixin fz26 {
+    font-size: 2.6rem;
+    @include mq(tab) {
+      font-size: 2.4rem;
+    }
+    @include mq(sm) {
+      font-size: 2.2rem;
+    }
+  }
+  
+  @mixin fz28 {
+    font-size: 2.8rem;
+    @include mq(tab) {
+      font-size: 2.4rem;
+    }
+    @include mq(sm) {
+      font-size: 2.2rem;
+    }
+  }
+  
+  @mixin fz30 {
+    font-size: 3rem;
+    @include mq(tab) {
+      font-size: 2.4rem;
+    }
+    @include mq(sm) {
+      font-size: 2.2rem;
+    }
+  }
+  
+  @mixin fz32 {
+    font-size: 3.2rem;
+    @include mq(tab-l) {
+      font-size: 3rem;
+    }
+    @include mq(tab) {
+      font-size: 2.6rem;
+    }
+    @include mq(sm) {
+      font-size: 2.4rem;
+    }
+  }
+  
+  @mixin fz34 {
+    font-size: 3.4rem;
+    @include mq(tab-l) {
+      font-size: 3rem;
+    }
+    @include mq(tab) {
+      font-size: 2.6rem;
+    }
+    @include mq(sm) {
+      font-size: 2.4rem;
+    }
+  }
+  
+  @mixin fz36 {
+    font-size: 3.6rem;
+    @include mq(tab-l) {
+      font-size: 3.2rem;
+    }
+    @include mq(tab) {
+      font-size: 2.8rem;
+    }
+    @include mq(sm) {
+      font-size: 2.4rem;
+    }
+  }
+
+
+@mixin fz40 {
+    font-size: 4rem;
+    @include mq(tab-l) {
+      font-size: 3.4rem;
+    }
+    @include mq(tab) {
+      font-size: 3rem;
+    }
+    @include mq(sm) {
+      font-size: 2.4rem;
+    }
+  }
+  
+  @mixin fz42 {
+    font-size: 4.2rem;
+    @include mq(tab-l) {
+      font-size: 3.2rem;
+    }
+    @include mq(tab) {
+      font-size: 2.8rem;
+    }
+    @include mq(sm) {
+      font-size: 2.6rem;
+    }
+  }
+  
+  @mixin fz45 {
+    font-size: 4.5rem;
+    @include mq(tab-l) {
+      font-size: 3.2rem;
+    }
+    @include mq(tab) {
+      font-size: 2.8rem;
+    }
+    @include mq(sm) {
+      font-size: 2.6rem;
+    }
+  }
+  
+  @mixin fz48 {
+    font-size: 4.8rem;
+    @include mq(tab-l) {
+      font-size: 4.2rem;
+    }
+    @include mq(tab) {
+      font-size: 3.2rem;
+    }
+    @include mq(sm) {
+      font-size: 2.8rem;
+    }
+  }
+  
+  @mixin fz50 {
+    font-size: 5rem;
+  }
+  
+  @mixin fz52 {
+    font-size: 5.2rem;
+    @include mq(lets) {
+      font-size: 4.8rem;
+    }
+    @include mq(pc13) {
+      font-size: 4rem;
+    }
+    @include mq(pc12) {
+      font-size: 3.6rem;
+    }
+    @include mq(tab-l) {
+      font-size: 4.6rem;
+    }
+    @include mq(tab) {
+      font-size: 4rem;
+    }
+    @include mq(sm) {
+      font-size: 3rem;
+    }
+  }
+  
+  @mixin fz54 {
+    font-size: 5.4rem;
+    @include mq(tab-l) {
+      font-size: 4.8rem;
+    }
+    @include mq(tab) {
+      font-size: 4.2rem;
+    }
+    @include mq(sm) {
+      font-size: 3.2rem;
+    }
+  }
+  
+  @mixin fz60 {
+    font-size: 6rem;
+    @include mq(tab-l) {
+      font-size: 5.2rem;
+    }
+    @include mq(tab) {
+      font-size: 4.6rem;
+    }
+    @include mq(sm) {
+      font-size: 3.6rem;
+    }
+  }
+
+  @mixin radius20 {
+    border-radius: 20px;
+    @include mq(tab) {
+      border-radius: 10px;
+    }
+  }
+  
+  @mixin radius30 {
+    border-radius: 30px;
+    @include mq(tab) {
+      border-radius: 20px;
+    }
+    @include mq(sm) {
+      border-radius: 15px;
+    }
+  }
+  
+  @mixin radius35 {
+    border-radius: 35px;
+  }
+  
+  @mixin radius50 {
+    border-radius: 50px;
+  }

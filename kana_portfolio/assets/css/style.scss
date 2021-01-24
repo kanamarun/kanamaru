@@ -1,0 +1,125 @@
+@charset "UTF-8";
+@import "./_mixin.scss";
+
+.mv {
+  background-image: url("../images/top/mv.jpg");
+  background-size: cover;
+  object-position: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  &-base {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &-title {
+    margin-bottom: 15px;
+    &__text {
+      color: #fff;
+      @include fz40;
+    }
+  }
+  &-list {
+    margin: 0px 5px;
+    padding: 10px 15px;
+    a {
+      &:hover {
+        opacity: 0.8;
+        color: $gray;
+      }
+      transition: 0.5s;
+    }
+    &__link {
+      @include fz20;
+      color: #fff;
+      transition: 0.3s ease;
+    }
+  }
+}
+
+// about
+
+.about {
+  &-contents {
+    align-items: center;
+  }
+}
+
+.about-content {
+  &__profile {
+    margin-right: 100px;
+    img {
+      width: 300px;
+      border-radius: 50%;
+    }
+    &__desc {
+      text-align: center;
+    }
+  }
+  &__message {
+    margin: auto;
+    padding: 40px 0;
+    width: 85%;
+    p {
+      @include fz18;
+    }
+  }
+}
+
+.profile {
+  &-name {
+    margin-bottom: 20px;
+    h3 {
+      @include fz22;
+    }
+    p {
+      @include fz20;
+    }
+  }
+  &-list {
+    @include fz18;
+    padding: 5px 0;
+  }
+}
+
+// portfolio
+
+.portfolio {
+  &-wrap {
+    margin-top: 30px;
+    .portfolio-lists {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .portfolio-list {
+      flex: 0 0 30%;
+      &:not(:last-child) {
+        margin-bottom: 50px;
+      }
+      &__image {
+        height: 300px;
+        width: 450px;
+      }
+    }
+  }
+}
+
+// contact
+
+.contact {
+  &-lists {
+    justify-content: center;
+    padding: 30px 0;
+  }
+  &-list {
+    margin: 0 20px;
+    img {
+      height: 50px;
+    }
+  }
+}
